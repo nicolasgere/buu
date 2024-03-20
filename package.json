@@ -3,13 +3,25 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "db:push": "drizzle-kit push:pg",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/eden": "^0.8.1",
+    "@elysiajs/swagger": "^0.8.5",
+    "@faker-js/faker": "^8.4.1",
+    "drizzle-orm": "^0.30.1",
+    "drizzle-typebox": "^0.1.1",
+    "drizzle-zod": "^0.5.1",
+    "elysia": "latest",
+    "pg": "^8.11.3"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@types/pg": "^8.11.2",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.20.14",
+    "fast-check": "^3.16.0"
   },
   "module": "src/index.js"
 }
