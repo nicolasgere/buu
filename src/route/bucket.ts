@@ -14,7 +14,7 @@ export const bucketRoute = new Elysia()
                 }
                 const name = body.name.toLocaleLowerCase()
                 const [bucket] = await db.insert(buckets).values({ name }).returning();
-                return { name: bucket.name };
+                return { name: bucket.name, configuration: bucket.configuration };
             }, {
                 response: selectBucketSchema,
                 body: insertBucketSchema
